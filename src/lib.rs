@@ -322,8 +322,16 @@ impl<S: FromStr + AsRef<str>> FromStr for UniCase<S> {
     }
 }
 
-#[cfg(test)]
-mod tests {
+//#[cfg(test)]
+#[cfg(feature = "with-testing")]
+pub mod tests {
+    use sgx_tstd as std;
+    use std::prelude::v1::*;
+
+    use testing::{generate_runner, test};
+
+    generate_runner!();
+
     use super::UniCase;
     #[cfg(__unicase__default_hasher)]
     use std::collections::hash_map::DefaultHasher;

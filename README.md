@@ -1,6 +1,7 @@
 # unicase
 
 [![Build Status](https://travis-ci.org/seanmonstar/unicase.svg?branch=master)](https://travis-ci.org/seanmonstar/unicase)
+![rsgx](https://github.com/sammyne/unicase/workflows/rsgx/badge.svg?branch=rsgx1.1.2)
 
 [Documentation](https://docs.rs/unicase)
 

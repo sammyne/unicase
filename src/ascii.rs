@@ -129,8 +129,14 @@ impl<S: AsRef<str>> Hash for Ascii<S> {
     }
 }
 
-#[cfg(test)]
+//#[cfg(test)]
+#[cfg(feature = "with-testing")]
 mod tests {
+    use sgx_tstd as std;
+    use std::prelude::v1::*;
+
+    use testing::test;
+
     use super::Ascii;
     #[cfg(__unicase__default_hasher)]
     use std::collections::hash_map::DefaultHasher;

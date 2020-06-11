@@ -403,6 +403,13 @@ pub fn lookup(orig: char) -> Fold {
     }
 }
 
+#[cfg(feature = "with-testing")]
+use sgx_tstd as std;
+#[cfg(feature = "with-testing")]
+use std::prelude::v1::*;
+#[cfg(feature = "with-testing")]
+use testing::test;
+
 #[test]
 fn lookup_consistency() {
     fn lookup_naive(orig: char) -> Fold {

@@ -157,8 +157,14 @@ mod fold {
     }
 }
 
-#[cfg(test)]
+//#[cfg(test)]
+#[cfg(feature = "with-testing")]
 mod tests {
+    use sgx_tstd as std;
+    use std::prelude::v1::*;
+
+    use testing::test;
+
     use super::Unicode;
 
     macro_rules! eq {
